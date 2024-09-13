@@ -4,9 +4,25 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+  <body class="index">
+    <header class="index__header header">
+      <nav class="header__site-navigation site-navigation">
+        <a class="site-navigation__logo-link" href="#">
+          <img class="site-navigation__logo logo" src="#" alt="Логотип сайта горордка Седона">
+        </a>
+        <ul class="site-navigation__links-list">
+          <li class="site-navigation__list-item"><a class="site-navigation__link site-navigation__link--current" href="#">Главная</a></li>
+          <li class="site-navigation__list-item"><a class="site-navigation__link" href="#">О седоне</a></li>
+          <li class="site-navigation__list-item"><a class="site-navigation__link" href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
+      <div class="header__user-menu user-menu">
+        <ul class="user-menu__list">
+          <li class="user-menu__item"><a class="user-menu__link--search" href="#"><span class="visually-hidden">Поиск</span></a></li>
+          <li class="user-menu__item"><a class="user-menu__link--favorites" href="#"><span class="visually-hidden">Избранное</span></a></li>
+        </ul>
+        <button class="user-menu__button">Хочу сюда!</button>
+      </div>
+    </header>
   </body>
 </html>
