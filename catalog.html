@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>HTML Academy: Седона - Каталог</title>
 </head>
 <body class="catalog">
   <header class="catalog__header header">
@@ -17,12 +17,12 @@
         <li class="site-navigation__list-item"><a class="site-navigation__link site-navigation__link--current" href="#">Гостиницы</a></li>
       </ul>
     </nav>
-    <div class="header__user-menu user-menu">
-      <ul class="user-menu__list">
-        <li class="user-menu__item"><a class="user-menu__link user-menu__link--search" href="#"><span class="visually-hidden">Поиск</span></a></li>
-        <li class="user-menu__item"><a class="user-menu__link user-menu__link--favorites" href="#"><span class="visually-hidden">Избранное</span></a></li>
+    <div class="header__sort sort">
+      <ul class="sort__list">
+        <li class="sort__item"><a class="sort__link sort__link--search" href="#"><span class="visually-hidden">Поиск</span></a></li>
+        <li class="sort__item"><a class="sort__link sort__link--favorites" href="#"><span class="visually-hidden">Избранное</span></a></li>
       </ul>
-      <button class="user-menu__button">Хочу сюда!</button>
+      <button class="sort__button">Хочу сюда!</button>
     </div>
   </header>
   <main class="catalog__hotel-search hotel-search">
@@ -40,17 +40,45 @@
       </div>
     </div>
     <aside class="hotel-search__filter filter">
+
+
       <!-- тут код aside -->
 
 
     </aside>
     <section class="hotel-list">
       <h2 class="hotel-list__title visually-hidden">Список гостиниц</h2>
-      <div class="hotel-list__search-result search-result">
-        <p></p>
-      </div>
-      <!-- тут код section -->
+      <header class="hotel-list__sort sort">
+        <p class="sort__text">Найдено гостиниц: <span class="sort__count">38</span></p>
+        <fieldset class="sort__fieldset">
+          <legend class="visually-hidden">Сортировка гостиниц</legend>
+          <label class="sort__label visually-hidden" for="sort-select">Поле выбора значения для сортировки</label>
+          <select class="sort__select" name="sort-select" id="sort-select">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="rating">По рейтингу</option>
+          </select>
+          <ul class="sort__views">
+            <li class="sort__view">
+                <button class="sort__button" type="button" aria-label="Просмотр в маленьких значках">
+                    <img src="#" alt="Иконка Маленькие значки">
+                </button>
+            </li>
+            <li class="sort__view">
+                <button class="sort__button" type="button" aria-label="Просмотр в крупных значках">
+                    <img src="#" alt="Иконка Крупные значки">
+                </button>
+            </li>
+            <li class="sort__view">
+                <button class="sort__button" type="button" aria-label="Просмотр в списке">
+                    <img src="#" alt="Иконка Список">
+                </button>
+            </li>
+        </ul>
+        </fieldset>
+      </header>
 
+      <!-- тут код section -->
 
     </section>
   </main>
