@@ -46,10 +46,10 @@
 
 
     </aside>
-    <section class="hotel-list">
-      <h2 class="hotel-list__title visually-hidden">Список гостиниц</h2>
-      <header class="hotel-list__sort sort">
-        <p class="sort__text">Найдено гостиниц: <span class="sort__count">38</span></p>
+    <section class="hotel-preview">
+      <h2 class="hotel-preview__title visually-hidden">Список гостиниц</h2>
+      <header class="hotel-preview__sort sort">
+        <p class="sort__text">Найдено гостиниц: <span class="sort__count" id="sortCount">38</span></p>
         <fieldset class="sort__fieldset">
           <legend class="visually-hidden">Сортировка гостиниц</legend>
           <label class="sort__label visually-hidden" for="sort-select">Поле выбора значения для сортировки</label>
@@ -77,8 +77,98 @@
         </ul>
         </fieldset>
       </header>
+      <ul class="hotel-preview__hotel-list hotel-list">
 
-      <!-- тут код section -->
+        <li class="hotel-list__item">
+          <article class="hotel-list__hotel-card hotel-card">
+            <img class="hotel-card__img" src="#" alt="Amara Resort & Spa: Живописноый каньон с яркими красными скалами и чистым синим небом над ним, освещенным мягким светом.">
+            <h2 class="hotel-card__title">Amara Resort & Spa</h2>
+            <dl class="hotel-card__room-type-price">
+              <dt class="hotel-card__type-hotel">Гостиница</dt>
+              <dd class="hotel-card__price-room">От <span class="hotel-card__price" id="roomPrice">4000</span> ₽</dd>
+            </dl>
+            <div class="hotel-card__button-container">
+              <a class="hotel-card__button button--link" type="button">подробнее</a>
+              <button class="hotel-card__button button" type="button">в избранное</button>
+            </div>
+            <div class="hotel-card__rating-container">
+              <ul class="hotel-card__rating-list">
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+              </ul>
+              <p class="hotel-card__rating">Рейтинг: <span class="hotel-card__rating-value" id="roomRatingValue">8,5</span></p>
+            </div>
+          </article>
+
+          <article class="hotel-list__hotel-card hotel-card">
+            <img class="hotel-card__img" src="#" alt="Villas at Poco Diablo: горный пейзаж с интересными формами и текстурами, где на фоне темных облаков виден радужная дуга.">
+            <h2 class="hotel-card__title">Villas at Poco Diablo</h2>
+            <dl class="hotel-card__room-type-price">
+              <dt class="hotel-card__type-hotel">Гостиница</dt>
+              <dd class="hotel-card__price-room">От <span class="hotel-card__price" id="roomPrice">5000</span> ₽</dd>
+            </dl>
+            <div class="hotel-card__button-container">
+              <a class="hotel-card__button button--link" type="button">подробнее</a>
+              <button class="hotel-card__button button" type="button">в избранное</button>
+            </div>
+            <div class="hotel-card__rating-container">
+              <ul class="hotel-card__rating-list">
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+              </ul>
+              <p class="hotel-card__rating">Рейтинг: <span class="hotel-card__rating-value" id="roomRatingValue">9,2</span></p>
+            </div>
+          </article>
+
+          <article class="hotel-list__hotel-card hotel-card">
+            <img class="hotel-card__img" src="#" alt="Desert Quail Inn: Красные скалы, их форма выделяется на фоне чистого голубого неба, создавая впечатляющий песчанный ландшафт.">
+            <h2 class="hotel-card__title">Desert Quail Inn</h2>
+            <dl class="hotel-card__room-type-price">
+              <dt class="hotel-card__type-hotel">Гостиница</dt>
+              <dd class="hotel-card__price-room">От <span class="hotel-card__price" id="roomPrice">2500</span> ₽</dd>
+            </dl>
+            <div class="hotel-card__button-container">
+              <a class="hotel-card__button button--link" type="button">подробнее</a>
+              <button class="hotel-card__button button" type="button">в избранное</button>
+            </div>
+            <div class="hotel-card__rating-container">
+              <ul class="hotel-card__rating-list">
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+              </ul>
+              <p class="hotel-card__rating">Рейтинг: <span class="hotel-card__rating-value" id="roomRatingValue">6,9</span></p>
+            </div>
+          </article>
+
+          <article class="hotel-list__hotel-card hotel-card">
+            <img class="hotel-card__img" src="#" alt="GreenTree Inn: Романтический вид на высокие скалы и звездное небо, подчеркивающее спокойствие вечернего времени.">
+            <h2 class="hotel-card__title">GreenTree Inn</h2>
+            <dl class="hotel-card__room-type-price">
+              <dt class="hotel-card__type-hotel">Гостиница</dt>
+              <dd class="hotel-card__price-room">От <span class="hotel-card__price" id="roomPrice">1500</span> ₽</dd>
+            </dl>
+            <div class="hotel-card__button-container">
+              <a class="hotel-card__button button--link" type="button">подробнее</a>
+              <button class="hotel-card__button button" type="button">в избранное</button>
+            </div>
+            <div class="hotel-card__rating-container">
+              <ul class="hotel-card__rating-list">
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+                <li class="hotel-card__rating-item"><img class="hotel-card__star" src="#" alt="Иконка рейтинга"></li>
+              </ul>
+              <p class="hotel-card__rating">Рейтинг: <span class="hotel-card__rating-value" id="roomRatingValue">5,0</span></p>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <footer class="pagination">
+
+      </footer>
 
     </section>
   </main>
