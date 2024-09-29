@@ -70,7 +70,7 @@ html {
 }
 
 
-.index {
+.page {
   margin: 0 auto;
   padding: 0;
   font-family: var(--font-family);
@@ -79,15 +79,15 @@ html {
   box-shadow: 0 0 15px 0 #00000033;
 }
 
-.index__header {
+.page__header {
   margin-bottom: -1px;
 }
 
-.index__catalog {
+.page__catalog {
   padding: 50px 0 60px;
 }
 
-/* .index__filter {
+/* .page__filter {
 
 } */
 
@@ -621,6 +621,7 @@ html {
 }
 
 .filter__label--price {
+  color: var(--form-input-color);
   position: absolute;
   text-align: right;
   top: 12px;
@@ -658,8 +659,8 @@ html {
 
 .filter__label--radio::after {
   position: absolute;
-  top: 8px;
-  right: 125px;
+  top: 7px;
+  right: 126px;
   content: '';
   display: none;
   padding: 4px;
