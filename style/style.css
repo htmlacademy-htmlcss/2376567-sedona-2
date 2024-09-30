@@ -74,6 +74,8 @@ html {
   margin: 0 auto;
   padding: 0;
   font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
   width: 1200px;
   background-color: var(--background-main-color);
   box-shadow: 0 0 15px 0 #00000033;
@@ -86,10 +88,6 @@ html {
 .page__catalog {
   padding: 50px 0 60px;
 }
-
-/* .page__filter {
-
-} */
 
 .button {
   min-width: 140px;
@@ -141,31 +139,28 @@ html {
 .title {
   margin: 0;
   padding: 0;
+  font-weight: 700;
   color: var(--text-main-color);
   font-family: var(--font-family);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .title--h1 {
   font-size: 60px;
-  font-weight: 700;
   line-height: 78px;
   text-align: left;
+  text-transform: capitalize;
 }
 
 .title--h2 {
   font-size: 30px;
-  font-weight: 700;
   line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .title--h3 {
   font-size: 24px;
-  font-weight: 700;
   line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .title--contrast {
@@ -221,7 +216,7 @@ html {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -282,10 +277,12 @@ html {
 }
 
 .hero {
+  color: var(--text-background1-color);
   background-image: url(../image/hero-devider.svg), url(../image/hero-background.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
+  background-size: 100%, cover;
   background-position: bottom, center;
+  background-color: var(--background-basic-color);
 }
 
 .hero__img {
@@ -479,11 +476,11 @@ html {
 } */
 
 .subscribe--additional-view {
+  color: var(--text-background1-color);
   background-image: url(../image/subscribe-background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-
-  color: var(--text-background1-color);
+  background-size: 100% auto;
+  background-color: var(--background-basic-color);
 }
 
 .subscribe__container {
@@ -579,9 +576,11 @@ html {
 }
 
 .catalog-header {
+  color: var(--text-background1-color);
   background-image: url(../image/catalog-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--background-basic-color);
 }
 
 .catalog-header__title {
@@ -805,7 +804,6 @@ html {
   content: '';
   background-image: url(../image/sort-arrow.svg);
   background-repeat: no-repeat;
-  /* background-size:contain; */
   width: 12px;
   height: 8px;
   top: 20px;
