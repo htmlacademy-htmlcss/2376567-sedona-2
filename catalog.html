@@ -116,14 +116,14 @@
            </fieldset>
            <div class="filter__button-container">
             <button class="filter__button button button--accent" type="submit">Применить</button>
-            <button class="filter__button button button--reset" type="button">Сбросить</button>
+            <button class="filter__button button button--reset" type="reset">Сбросить</button>
           </div>
          </div>
         </form>
       </section>
       <section class="page__catalog catalog container">
         <header class="catalog__sort sort">
-          <h2 class="sort__title">Найдено гостиниц: <span class="sort__count" id="sort-count">38</span></h2>
+          <h2 class="sort__title title title--h2">Найдено гостиниц: <span class="title__sort-count" id="sort-count">38</span></h2>
           <div class="sort__container">
             <label class="sort__field">
               <select class="sort__select" name="sort-select" id="sort-select">
@@ -161,11 +161,11 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="catalog__catalog-card catalog-card">
-              <a class="catalog-card__link" href="#">
+              <a class="catalog-card__img-wrapper" href="#">
                 <img class="catalog-card__img" src="image/hotel-1.jpg" width="300" height="212" alt="Живописноый каньон с яркими красными скалами.">
-                <h3 class="catalog-card__title">Amara Resort & Spa</h3>
               </a>
-                <dl class="catalog-card__description">
+              <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">Amara Resort & Spa</a></h3>
+              <dl class="catalog-card__description">
                 <dt class="catalog-card__type">Гостиница</dt>
                 <dd class="catalog-card__price">От <span class="catalog-card__value">4000</span> ₽</dd>
               </dl>
@@ -175,26 +175,10 @@
               </div>
               <div class="catalog-card__rating-container">
                 <ul class="catalog-card__rating-list">
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
                 </ul>
                 <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">8,5</span></p>
               </div>
@@ -202,10 +186,10 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__catalog-card catalog-card">
-              <a class="catalog-card__link" href="#">
+              <a class="catalog-card__img-wrapper" href="#">
                 <img class="catalog-card__img" src="image/hotel-2.jpg" width="300" height="212" alt="Горный пейзаж, где на фоне темных облаков видна радуга.">
-                <h3 class="catalog-card__title">Villas at Poco Diablo</h3>
               </a>
+              <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">Villas at Poco Diablo</a></h3>
               <dl class="catalog-card__description">
                 <dt class="catalog-card__type">Гостиница</dt>
                 <dd class="catalog-card__price">От <span class="catalog-card__value">5000</span> ₽</dd>
@@ -216,26 +200,10 @@
               </div>
               <div class="catalog-card__rating-container">
                 <ul class="catalog-card__rating-list">
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
                 </ul>
                 <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">9,2</span></p>
               </div>
@@ -243,10 +211,10 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__catalog-card catalog-card">
-              <a class="catalog-card__link" href="#">
+              <a class="catalog-card__img-wrapper" href="#">
                 <img class="catalog-card__img" src="image/hotel-3.jpg" width="300" height="212" alt="Красные скалы на фоне чистого голубого неба.">
-                <h3 class="catalog-card__title">Desert Quail Inn</h3>
               </a>
+              <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">Desert Quail Inn</a></h3>
               <dl class="catalog-card__description">
                 <dt class="catalog-card__type">Гостиница</dt>
                 <dd class="catalog-card__price">От <span class="catalog-card__value">2500</span> ₽</dd>
@@ -257,21 +225,9 @@
               </div>
               <div class="catalog-card__rating-container">
                 <ul class="catalog-card__rating-list">
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
                 </ul>
                 <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">6,9</span></p>
               </div>
@@ -279,10 +235,10 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__catalog-card catalog-card">
-              <a class="catalog-card__link" href="#">
+              <a class="catalog-card__img-wrapper" href="#">
                 <img class="catalog-card__img" src="image/hotel-4.jpg" width="300" height="212" alt="Вид на высокие скалы и звездное небо.">
-                <h3 class="catalog-card__title">GreenTree Inn</h3>
               </a>
+              <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">GreenTree Inn</a></h3>
               <dl class="catalog-card__description">
                 <dt class="catalog-card__type">Гостиница</dt>
                 <dd class="catalog-card__price">От <span class="catalog-card__value">1500</span> ₽</dd>
@@ -293,16 +249,8 @@
               </div>
               <div class="catalog-card__rating-container">
                 <ul class="catalog-card__rating-list">
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="catalog-card__rating-item">
-                    <svg width="18" height="17">
-                      <use xlink:href="image/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
+                  <li class="catalog-card__rating-item"></li>
+                  <li class="catalog-card__rating-item"></li>
                 </ul>
                 <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">5,0</span></p>
               </div>
@@ -362,6 +310,7 @@
       </ul>
       <a class="footer__tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="footer__logo-link" href="https://htmlacademy.ru/">
+        <span class="visually-hidden">Логотип HtmlAcademy</span>
         <svg width="115" height="33">
           <use xlink:href="image/sprite.svg#logo-htmlacademy"></use>
         </svg>
