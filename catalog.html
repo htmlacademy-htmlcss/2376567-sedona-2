@@ -1,371 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <title>HTML Academy: Седона - Каталог</title>
-</head>
-<body class="page">
-  <header class="page__header header container">
-    <nav class="header__navigation navigation">
-      <a class="navigation__logo-link" href="index.html">
-        <img class="navigation__logo logo" width="140" height="70" src="image/logo-sedona.svg" alt="Логотип сайта горордка Седона">
-      </a>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">О седоне</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="#">Гостиницы</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__user-menu user-menu">
-      <ul class="user-menu__list">
-        <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--search" href="#">
-          <span class="visually-hidden">Поиск</span>
-          <svg width="20" height="20">
-            <use xlink:href="image/sprite.svg#icon-search"></use>
-          </svg>
+<html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>HTML Academy: Седона - Каталог</title>
+  </head>
+  <body class="page__body">
+    <header class="page__header header container">
+      <nav class="header__navigation navigation">
+        <a class="navigation__logo-link" href="index.html">
+          <img class="navigation__logo logo" width="140" height="70" src="image/logo-sedona.svg" alt="Логотип сайта горордка Седона">
         </a>
-        </li>
-        <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--favorites" href="#">
-          <span class="visually-hidden">Избранное</span>
-          <svg width="20" height="20">
-            <use xlink:href="image/sprite.svg#icon-heart"></use>
-          </svg>
-          <span class="user-menu__badge">12</span>
-        </a></li>
-      </ul>
-      <a class="user-menu__button button button--basic">Хочу сюда!</a>
-    </div>
-  </header>
-  <main class="page__main main">
-    <section class="main__catalog-header catalog-header">
-      <header class="catalog-header__header container">
-        <h1 class="catalog-header__title title title--h1 title--contrast">Гостиницы Седоны</h1>
-        <ol class="catalog-header__breadcrumbs breadcrumbs">
-            <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="index.html"><span class="visually-hidden">Главная</span>
-                <svg width="13" height="12">
-                  <use xlink:href="image/sprite.svg#breadcrumbs-home"></use>
-                </svg>
-                </a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link breadcrumbs__link--current" href="catalog.html">Гостиницы</a>
-            </li>
-        </ol>
-      </header>
-      <form class="page__filter filter container" action="https://echo.htmlacademy.ru" method="post">
-       <div class="filter__container-left">
-         <fieldset class="filter__fieldset">
-           <legend class="filter__legend">Инфраструктура:</legend>
-           <label class="filter__field">
-             <input class="filter__checkbox visually-hidden" type="checkbox" name="pool" id="checkbox-pool" checked>
-             <span class="filter__label filter__label--checkbox" for="checkbox-pool">Бассейн</span>
-           </label>
-           <label class="filter__field">
-             <input class="filter__checkbox visually-hidden" type="checkbox" name="parking" id="checkbox-parking" checked>
-             <span class="filter__label filter__label--checkbox" for="checkbox-parking">Парковка</span>
-           </label>
-           <label class="filter__field">
-             <input class=" filter__checkbox visually-hidden" type="checkbox" name="wi-fi" id="checkbox-WiFi">
-             <span class="filter__label filter__label--checkbox" for="checkbox-WiFi">Wi-Fi</span>
-           </label>
-         </fieldset>
-         <fieldset class="filter__fieldset">
-           <legend class="filter__legend">Тип жилья:</legend>
-           <label class="filter__field">
-             <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="hotel" id="radio-hotel" checked>
-             <span class="filter__label filter__label--radio" for="radio-hotel">Гостиница</span>
-           </label>
-           <label class="filter__field filter__field--radio">
-             <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="motel" id="radio-motel">
-             <span class="filter__label filter__label--radio" for="radio-motel">Мотель</span>
-           </label>
-           <label class="filter__field filter__field--radio">
-             <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="aprartments" id="radio-aprartments">
-             <span class="filter__label filter__label--radio" for="radio-aprartments">Апартаменты</span>
-           </label>
-         </fieldset>
-       </div>
-       <div class="filter__container-right">
-         <fieldset class="filter__fieldset">
-           <legend class="filter__legend">Стоимость, ₽:</legend>
-           <div class="filter__value-container">
-            <label class="filter__field">
-              <input class="filter__form-input filter__form-input--from form-input" type="text" name="price-from" id="price-from">
-              <span class="filter__label filter__label--price">от</span>
-            </label>
-            <label class="filter__field">
-              <input class="filter__form-input filter__form-input--to form-input" type="text" name="price-to" id="price-to">
-              <span class="filter__label filter__label--price">до</span>
-            </label>
-           </div>
-           <div class="filter__slider-container">
-             <input class="filter__slider-input" type="range" name="price-slider" id="price-slider">
-             <label class="filter__field visually-hidden" for="price-slider">Ползунок для регулировки цены</label>
-           </div>
-         </fieldset>
-         <div class="filter__button-container">
-          <button class="filter__button button button--accent" type="submit">Применить</button>
-          <button class="filter__button button button--reset" type="button">Сбросить</button>
-        </div>
-       </div>
-      </form>
-    </section>
-    <section class="page__catalog catalog container">
-      <header class="catalog__sort sort">
-        <h2 class="sort__title">Найдено гостиниц: <span class="sort__count" id="sort-count">38</span></h2>
-        <div class="sort__container">
-          <label class="sort__field">
-            <select class="sort__select" name="sort-select" id="sort-select">
-                <option value="cheap">Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-                <option value="rating">По рейтингу</option>
-            </select>
-            <span class="visually-hidden">Поле выбора значения для сортировки</span>
-          </label>
-          <ul class="sort__views">
-            <li class="sort__view">
-                <button class="sort__button sort__button--current" type="button" aria-label="Просмотр в маленьких значках">
-                  <svg width="16" height="14">
-                    <use xlink:href="image/sprite.svg#sort-small"></use>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О седоне</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__user-menu user-menu">
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__link--search" href="#">
+            <span class="visually-hidden">Поиск</span>
+            <svg width="20" height="20">
+              <use xlink:href="image/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__link--favorites" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <svg width="20" height="20">
+              <use xlink:href="image/sprite.svg#icon-heart"></use>
+            </svg>
+            <span class="user-menu__badge">12</span>
+          </a></li>
+        </ul>
+        <a class="user-menu__button button button--basic">Хочу сюда!</a>
+      </div>
+    </header>
+    <main class="page__main main">
+      <section class="main__catalog-header catalog-header">
+        <header class="catalog-header__header container">
+          <h1 class="catalog-header__title title title--h1 title--contrast">Гостиницы Седоны</h1>
+          <ol class="catalog-header__breadcrumbs breadcrumbs">
+              <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html"><span class="visually-hidden">Главная</span>
+                  <svg width="13" height="12">
+                    <use xlink:href="image/sprite.svg#breadcrumbs-home"></use>
                   </svg>
-                </button>
-            </li>
-            <li class="sort__view">
-                <button class="sort__button" type="button" aria-label="Просмотр в крупных значках">
-                    <svg width="16" height="14">
-                      <use xlink:href="image/sprite.svg#sort-big"></use>
-                    </svg>
-                </button>
-            </li>
-            <li class="sort__view">
-                <button class="sort__button" type="button" aria-label="Просмотр в списке">
-                  <svg width="16" height="14">
-                    <use xlink:href="image/sprite.svg#sort-list"></use>
-                  </svg>
-                </button>
-            </li>
-          </ul>
-        </div>
-      </header>
-      <ul class="catalog__list">
-        <li class="catalog__item">
-          <article class="catalog__catalog-card catalog-card">
-            <a class="catalog-card__link" href="#">
-              <img class="catalog-card__img" src="image/hotel-1.jpg" width="300" height="212" alt="Живописноый каньон с яркими красными скалами.">
-              <h3 class="catalog-card__title">Amara Resort & Spa</h3>
-            </a>
-              <dl class="catalog-card__description">
-              <dt class="catalog-card__type">Гостиница</dt>
-              <dd class="catalog-card__price">От <span class="catalog-card__value">4000</span> ₽</dd>
-            </dl>
-            <div class="catalog-card__button-container">
-              <a class="catalog-card__button button button--small">подробнее</a>
-              <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
-            </div>
-            <div class="catalog-card__rating-container">
-              <ul class="catalog-card__rating-list">
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-              </ul>
-              <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">8,5</span></p>
-            </div>
-          </article>
-        </li>
-        <li class="catalog__item">
-          <article class="catalog__catalog-card catalog-card">
-            <a class="catalog-card__link" href="#">
-              <img class="catalog-card__img" src="image/hotel-2.jpg" width="300" height="212" alt="Горный пейзаж, где на фоне темных облаков видна радуга.">
-              <h3 class="catalog-card__title">Villas at Poco Diablo</h3>
-            </a>
-            <dl class="catalog-card__description">
-              <dt class="catalog-card__type">Гостиница</dt>
-              <dd class="catalog-card__price">От <span class="catalog-card__value">5000</span> ₽</dd>
-            </dl>
-            <div class="catalog-card__button-container">
-              <a class="catalog-card__button button button--small" href="#">подробнее</a>
-              <button class="catalog-card__button button button--small button--selected" type="button">в избранном</button>
-            </div>
-            <div class="catalog-card__rating-container">
-              <ul class="catalog-card__rating-list">
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-              </ul>
-              <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">9,2</span></p>
-            </div>
-          </article>
-        </li>
-        <li class="catalog__item">
-          <article class="catalog__catalog-card catalog-card">
-            <a class="catalog-card__link" href="#">
-              <img class="catalog-card__img" src="image/hotel-3.jpg" width="300" height="212" alt="Красные скалы на фоне чистого голубого неба.">
-              <h3 class="catalog-card__title">Desert Quail Inn</h3>
-            </a>
-            <dl class="catalog-card__description">
-              <dt class="catalog-card__type">Гостиница</dt>
-              <dd class="catalog-card__price">От <span class="catalog-card__value">2500</span> ₽</dd>
-            </dl>
-            <div class="catalog-card__button-container">
-              <a class="catalog-card__button button button--small" href="#">подробнее</a>
-              <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
-            </div>
-            <div class="catalog-card__rating-container">
-              <ul class="catalog-card__rating-list">
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-              </ul>
-              <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">6,9</span></p>
-            </div>
-          </article>
-        </li>
-        <li class="catalog__item">
-          <article class="catalog__catalog-card catalog-card">
-            <a class="catalog-card__link" href="#">
-              <img class="catalog-card__img" src="image/hotel-4.jpg" width="300" height="212" alt="Вид на высокие скалы и звездное небо.">
-              <h3 class="catalog-card__title">GreenTree Inn</h3>
-            </a>
-            <dl class="catalog-card__description">
-              <dt class="catalog-card__type">Гостиница</dt>
-              <dd class="catalog-card__price">От <span class="catalog-card__value">1500</span> ₽</dd>
-            </dl>
-            <div class="catalog-card__button-container">
-              <a class="catalog-card__button button button--small" href="#">подробнее</a>
-              <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
-            </div>
-            <div class="catalog-card__rating-container">
-              <ul class="catalog-card__rating-list">
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-                <li class="catalog-card__rating-item">
-                  <svg width="18" height="17">
-                    <use xlink:href="image/sprite.svg#icon-star"></use>
-                  </svg>
-                </li>
-              </ul>
-              <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">5,0</span></p>
-            </div>
-          </article>
-        </li>
-      </ul>
-      <footer class="catalog__pagination">
-        <a class="catalog__page-number catalog__page-number--current" href="#">1</a>
-        <a class="catalog__page-number" href="#">2</a>
-        <a class="catalog__page-number" href="#">3</a>
-        <a class="catalog__page-number" href="#">4</a>
-        <a class="catalog__page-dots" href="#">...</a>
-        <a class="catalog__page-number" href="#">10</a>
-      </footer>
-    </section>
-    <section class="main__subscribe subscribe">
-        <div class="subscribe__container">
-          <div class="subscribe__description description">
-            <h2 class="visually-hidden">Подписаться на рассылку</h2>
-            <p class="description__title title title--h2">Подпишитесь на рассылку</p>
-            <p class="description__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+                  </a>
+              </li>
+              <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link breadcrumbs__link--current" href="catalog.html">Гостиницы</a>
+              </li>
+          </ol>
+        </header>
+        <form class="page__filter filter container" action="https://echo.htmlacademy.ru" method="post">
+         <div class="filter__container-left">
+           <fieldset class="filter__fieldset">
+             <legend class="filter__legend">Инфраструктура:</legend>
+             <label class="filter__field">
+               <input class="filter__checkbox visually-hidden" type="checkbox" name="pool" id="checkbox-pool" checked>
+               <span class="filter__label filter__label--checkbox" for="checkbox-pool">Бассейн</span>
+             </label>
+             <label class="filter__field">
+               <input class="filter__checkbox visually-hidden" type="checkbox" name="parking" id="checkbox-parking" checked>
+               <span class="filter__label filter__label--checkbox" for="checkbox-parking">Парковка</span>
+             </label>
+             <label class="filter__field">
+               <input class=" filter__checkbox visually-hidden" type="checkbox" name="wi-fi" id="checkbox-WiFi">
+               <span class="filter__label filter__label--checkbox" for="checkbox-WiFi">Wi-Fi</span>
+             </label>
+           </fieldset>
+           <fieldset class="filter__fieldset">
+             <legend class="filter__legend">Тип жилья:</legend>
+             <label class="filter__field">
+               <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="hotel" id="radio-hotel" checked>
+               <span class="filter__label filter__label--radio" for="radio-hotel">Гостиница</span>
+             </label>
+             <label class="filter__field filter__field--radio">
+               <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="motel" id="radio-motel">
+               <span class="filter__label filter__label--radio" for="radio-motel">Мотель</span>
+             </label>
+             <label class="filter__field filter__field--radio">
+               <input class="filter__radio visually-hidden" type="radio" name="housing-type" value="aprartments" id="radio-aprartments">
+               <span class="filter__label filter__label--radio" for="radio-aprartments">Апартаменты</span>
+             </label>
+           </fieldset>
+         </div>
+         <div class="filter__container-right">
+           <fieldset class="filter__fieldset">
+             <legend class="filter__legend">Стоимость, ₽:</legend>
+             <div class="filter__value-container">
+              <label class="filter__field">
+                <input class="filter__form-input filter__form-input--from form-input" type="text" name="price-from" id="price-from">
+                <span class="filter__label filter__label--price">от</span>
+              </label>
+              <label class="filter__field">
+                <input class="filter__form-input filter__form-input--to form-input" type="text" name="price-to" id="price-to">
+                <span class="filter__label filter__label--price">до</span>
+              </label>
+             </div>
+             <div class="filter__slider-container">
+               <input class="filter__slider-input" type="range" name="price-slider" id="price-slider">
+               <label class="filter__field visually-hidden" for="price-slider">Ползунок для регулировки цены</label>
+             </div>
+           </fieldset>
+           <div class="filter__button-container">
+            <button class="filter__button button button--accent" type="submit">Применить</button>
+            <button class="filter__button button button--reset" type="button">Сбросить</button>
           </div>
-          <form class="subscribe__form" id="subscribe-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-            <label class="subscribe__label visually-hidden" for="subscribe-form-email">Введите Email</label>
-              <input class="subscribe__form-input form-input" type="email" id ="subscribe-form-email" name="guest-email" placeholder="Ваш e-mail">
-              <button class="subscribe__button button button--big button--accent" type="submit">Подписаться</button>
-          </form>
-        </div>
+         </div>
+        </form>
       </section>
-  </main>
-  <footer class="page__footer footer container">
-    <ul class="footer__socials socials">
-      <li class="socials__item">
-        <a class="socials__link" href="#">
-          <span class="visually-hidden">Мы в Контакте</span>
-          <svg width="24" height="16">
-            <use xlink:href="image/sprite.svg#social-vk"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a class="socials__link" href="#">
-          <span class="visually-hidden">Мы в Телеграмм</span>
-          <svg width="18" height="15">
-            <use xlink:href="image/sprite.svg#social-telegram"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a class="socials__link" href="#">
-          <span class="visually-hidden">Мы в Ютуб</span>
-          <svg width="22" height="17">
-            <use xlink:href="image/sprite.svg#social-youtube"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <a class="footer__tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <a class="footer__logo-link" href="https://htmlacademy.ru/">
-      <svg width="115" height="33">
-        <use xlink:href="image/sprite.svg#logo-htmlacademy"></use>
-      </svg>
-    </a>
-  </footer>
-</body>
+      <section class="page__catalog catalog container">
+        <header class="catalog__sort sort">
+          <h2 class="sort__title">Найдено гостиниц: <span class="sort__count" id="sort-count">38</span></h2>
+          <div class="sort__container">
+            <label class="sort__field">
+              <select class="sort__select" name="sort-select" id="sort-select">
+                  <option value="cheap">Сначала дешевые</option>
+                  <option value="expensive">Сначала дорогие</option>
+                  <option value="rating">По рейтингу</option>
+              </select>
+              <span class="visually-hidden">Поле выбора значения для сортировки</span>
+            </label>
+            <ul class="sort__views">
+              <li class="sort__view">
+                  <button class="sort__button sort__button--current" type="button" aria-label="Просмотр в маленьких значках">
+                    <svg width="16" height="14">
+                      <use xlink:href="image/sprite.svg#sort-small"></use>
+                    </svg>
+                  </button>
+              </li>
+              <li class="sort__view">
+                  <button class="sort__button" type="button" aria-label="Просмотр в крупных значках">
+                      <svg width="16" height="14">
+                        <use xlink:href="image/sprite.svg#sort-big"></use>
+                      </svg>
+                  </button>
+              </li>
+              <li class="sort__view">
+                  <button class="sort__button" type="button" aria-label="Просмотр в списке">
+                    <svg width="16" height="14">
+                      <use xlink:href="image/sprite.svg#sort-list"></use>
+                    </svg>
+                  </button>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <article class="catalog__catalog-card catalog-card">
+              <a class="catalog-card__link" href="#">
+                <img class="catalog-card__img" src="image/hotel-1.jpg" width="300" height="212" alt="Живописноый каньон с яркими красными скалами.">
+                <h3 class="catalog-card__title">Amara Resort & Spa</h3>
+              </a>
+                <dl class="catalog-card__description">
+                <dt class="catalog-card__type">Гостиница</dt>
+                <dd class="catalog-card__price">От <span class="catalog-card__value">4000</span> ₽</dd>
+              </dl>
+              <div class="catalog-card__button-container">
+                <a class="catalog-card__button button button--small">подробнее</a>
+                <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
+              </div>
+              <div class="catalog-card__rating-container">
+                <ul class="catalog-card__rating-list">
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">8,5</span></p>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item">
+            <article class="catalog__catalog-card catalog-card">
+              <a class="catalog-card__link" href="#">
+                <img class="catalog-card__img" src="image/hotel-2.jpg" width="300" height="212" alt="Горный пейзаж, где на фоне темных облаков видна радуга.">
+                <h3 class="catalog-card__title">Villas at Poco Diablo</h3>
+              </a>
+              <dl class="catalog-card__description">
+                <dt class="catalog-card__type">Гостиница</dt>
+                <dd class="catalog-card__price">От <span class="catalog-card__value">5000</span> ₽</dd>
+              </dl>
+              <div class="catalog-card__button-container">
+                <a class="catalog-card__button button button--small" href="#">подробнее</a>
+                <button class="catalog-card__button button button--small button--selected" type="button">в избранном</button>
+              </div>
+              <div class="catalog-card__rating-container">
+                <ul class="catalog-card__rating-list">
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">9,2</span></p>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item">
+            <article class="catalog__catalog-card catalog-card">
+              <a class="catalog-card__link" href="#">
+                <img class="catalog-card__img" src="image/hotel-3.jpg" width="300" height="212" alt="Красные скалы на фоне чистого голубого неба.">
+                <h3 class="catalog-card__title">Desert Quail Inn</h3>
+              </a>
+              <dl class="catalog-card__description">
+                <dt class="catalog-card__type">Гостиница</dt>
+                <dd class="catalog-card__price">От <span class="catalog-card__value">2500</span> ₽</dd>
+              </dl>
+              <div class="catalog-card__button-container">
+                <a class="catalog-card__button button button--small" href="#">подробнее</a>
+                <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
+              </div>
+              <div class="catalog-card__rating-container">
+                <ul class="catalog-card__rating-list">
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">6,9</span></p>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item">
+            <article class="catalog__catalog-card catalog-card">
+              <a class="catalog-card__link" href="#">
+                <img class="catalog-card__img" src="image/hotel-4.jpg" width="300" height="212" alt="Вид на высокие скалы и звездное небо.">
+                <h3 class="catalog-card__title">GreenTree Inn</h3>
+              </a>
+              <dl class="catalog-card__description">
+                <dt class="catalog-card__type">Гостиница</dt>
+                <dd class="catalog-card__price">От <span class="catalog-card__value">1500</span> ₽</dd>
+              </dl>
+              <div class="catalog-card__button-container">
+                <a class="catalog-card__button button button--small" href="#">подробнее</a>
+                <button class="catalog-card__button button button--small button--accent" type="button">в избранное</button>
+              </div>
+              <div class="catalog-card__rating-container">
+                <ul class="catalog-card__rating-list">
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="catalog-card__rating-item">
+                    <svg width="18" height="17">
+                      <use xlink:href="image/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <p class="catalog-card__rating">Рейтинг: <span class="catalog-card__rating-value">5,0</span></p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <footer class="catalog__pagination">
+          <a class="catalog__page-number catalog__page-number--current" href="#">1</a>
+          <a class="catalog__page-number" href="#">2</a>
+          <a class="catalog__page-number" href="#">3</a>
+          <a class="catalog__page-number" href="#">4</a>
+          <a class="catalog__page-dots" href="#">...</a>
+          <a class="catalog__page-number" href="#">10</a>
+        </footer>
+      </section>
+      <section class="main__subscribe subscribe">
+          <div class="subscribe__container">
+            <div class="subscribe__description description">
+              <h2 class="visually-hidden">Подписаться на рассылку</h2>
+              <p class="description__title title title--h2">Подпишитесь на рассылку</p>
+              <p class="description__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            </div>
+            <form class="subscribe__form" id="subscribe-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+              <label class="subscribe__label visually-hidden" for="subscribe-form-email">Введите Email</label>
+                <input class="subscribe__form-input form-input" type="email" id ="subscribe-form-email" name="guest-email" placeholder="Ваш e-mail">
+                <button class="subscribe__button button button--big button--accent" type="submit">Подписаться</button>
+            </form>
+          </div>
+        </section>
+    </main>
+    <footer class="page__footer footer container">
+      <ul class="footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="visually-hidden">Мы в Контакте</span>
+            <svg width="24" height="16">
+              <use xlink:href="image/sprite.svg#social-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="visually-hidden">Мы в Телеграмм</span>
+            <svg width="18" height="15">
+              <use xlink:href="image/sprite.svg#social-telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <span class="visually-hidden">Мы в Ютуб</span>
+            <svg width="22" height="17">
+              <use xlink:href="image/sprite.svg#social-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a class="footer__tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="footer__logo-link" href="https://htmlacademy.ru/">
+        <svg width="115" height="33">
+          <use xlink:href="image/sprite.svg#logo-htmlacademy"></use>
+        </svg>
+      </a>
+    </footer>
+  </body>
 </html>

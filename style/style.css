@@ -54,13 +54,8 @@
   overflow: hidden;
 }
 
-html {
+.page {
   background-color: var(--background-back-color);
-}
-
-.page-wrapper {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .container {
@@ -70,14 +65,16 @@ html {
 }
 
 
-.page {
+.page__body {
   margin: 0 auto;
   padding: 0;
   font-family: var(--font-family);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
   width: 1200px;
   background-color: var(--background-main-color);
+  color: var(--text-main-color);
   box-shadow: 0 0 15px 0 #00000033;
 }
 
@@ -278,11 +275,11 @@ html {
 
 .hero {
   color: var(--text-background1-color);
+  background-color: var(--background-basic-color);
   background-image: url(../image/hero-devider.svg), url(../image/hero-background.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-size: 100%, cover;
-  background-position: bottom, center;
-  background-color: var(--background-basic-color);
+  background-size: 100% auto, 100% auto;
+  background-position: center bottom -1px, center;
 }
 
 .hero__img {
@@ -331,9 +328,13 @@ html {
   padding: 0;
   color: var(--text-second-color);
   font-size: 18px;
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 21px;
   text-align: center;
+}
+
+.card__text--contrast {
+  color: var(--text-background1-color);
 }
 
 .advantages__list {
@@ -402,16 +403,12 @@ html {
   padding: 64px 0;
 }
 
-/* .services__title {
-  margin-bottom: 20px;
-} */
-
 .services__text {
   padding: 0;
   margin: 0;
   color: var(--text-second-color);
   font-size: 18px;
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 21px;
   text-align: center;
 }
@@ -443,13 +440,12 @@ html {
 } */
 
 .description__text {
-  /* margin-bottom: 20px; */
   margin: 0;
   padding: 0;
   color: var(--text-second-color);
-  font-size: 22px;
+  /* font-size: 22px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 26px; */
   text-align: center;
 }
 
@@ -497,6 +493,7 @@ html {
 
 .form-input {
   padding: 12px 20px;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -557,6 +554,10 @@ html {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
 }
 
 .breadcrumbs__link {
@@ -598,7 +599,8 @@ html {
 }
 
 .filter__legend {
-  margin-bottom: 32px;
+  padding: 0;
+  margin: 0 0 32px;
 
   color: var(--text-background1-color);
   font-size: 20px;
@@ -615,7 +617,7 @@ html {
   color: var(--form-element1-color);
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 23px;
   text-align: left;
 }
 
@@ -640,7 +642,7 @@ html {
 .filter__label--checkbox::after {
   position: absolute;
   top: 0;
-  right: 134px;
+  right: 130px;
   content: url(../image/check-icon.svg);
   width: 12px;
   height: 10px;
@@ -784,6 +786,7 @@ html {
 }
 
 .sort__select {
+  font-family: var(--font-family);
   width: 292px;
   padding: 14px 20px 14px 20px;
   color: rgb(51, 51, 51);
@@ -868,6 +871,11 @@ html {
   padding: 0;
   display: flex;
   justify-content: space-between;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 }
 
 .catalog-card__button-container {
@@ -887,6 +895,11 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .catalog-card__rating-item {
