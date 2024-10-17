@@ -60,61 +60,56 @@
               </ol>
             </header>
             <form class="page__filter filter container" action="https://echo.htmlacademy.ru" method="post">
-             <div class="filter__container-left">
-               <fieldset class="filter__fieldset">
-                 <legend class="filter__legend">Инфраструктура:</legend>
-                 <label class="filter__checkbox-button checkbox-button">
-                   <input class="checkbox-button__input visually-hidden" type="checkbox" name="pool" id="checkbox-pool" checked>
-                   <span class="checkbox-button__label">Бассейн</span>
+              <fieldset class="filter__fieldset filter__fieldset--infrastructure">
+                <legend class="filter__legend">Инфраструктура:</legend>
+                <label class="filter__checkbox-button checkbox-button">
+                  <input class="checkbox-button__input visually-hidden" type="checkbox" name="pool" id="checkbox-pool" checked>
+                  <span class="checkbox-button__label">Бассейн</span>
+                </label>
+                <label class="filter__checkbox-button checkbox-button">
+                  <input class="checkbox-button__input visually-hidden" type="checkbox" name="parking" id="checkbox-parking" checked>
+                  <span class="checkbox-button__label">Парковка</span>
+                </label>
+                <label class="filter__checkbox-button checkbox-button">
+                  <input class="checkbox-button__input visually-hidden" type="checkbox" name="wi-fi" id="checkbox-WiFi">
+                  <span class="checkbox-button__label">Wi-Fi</span>
+                </label>
+              </fieldset>
+              <fieldset class="filter__fieldset filter__fieldset--type">
+                <legend class="filter__legend">Тип жилья:</legend>
+                <label class="filter__radio-button radio-button">
+                  <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="hotel" id="radio-hotel" checked>
+                  <span class="radio-button__label">Гостиница</span>
+                </label>
+                <label class="filter__radio-button radio-button">
+                  <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="motel" id="radio-motel">
+                  <span class="radio-button__label">Мотель</span>
+                </label>
+                <label class="filter__radio-button radio-button">
+                  <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="aprartments" id="radio-aprartments">
+                  <span class="radio-button__label">Апартаменты</span>
+                </label>
+              </fieldset>
+              <fieldset class="filter__fieldset filter__fieldset--price">
+                <legend class="filter__legend">Стоимость, ₽:</legend>
+                <div class="filter__value-container">
+                 <label class="form-control form-control--absolute-label">
+                   <input class="form-control__form-input form-input form-control__form-input--left" type="text" name="price-from" id="price-from">
+                   <span class="form-control__label form-control__label--absolute">от</span>
                  </label>
-                 <label class="filter__checkbox-button checkbox-button">
-                   <input class="checkbox-button__input visually-hidden" type="checkbox" name="parking" id="checkbox-parking" checked>
-                   <span class="checkbox-button__label">Парковка</span>
+                 <label class="form-control form-control--absolute-label">
+                   <input class="form-control__form-input form-input form-control__form-input--right" type="text" name="price-to" id="price-to">
+                   <span class="form-control__label form-control__label--absolute">до</span>
                  </label>
-                 <label class="filter__checkbox-button checkbox-button">
-                   <input class="checkbox-button__input visually-hidden" type="checkbox" name="wi-fi" id="checkbox-WiFi">
-                   <span class="checkbox-button__label">Wi-Fi</span>
-                 </label>
-               </fieldset>
-               <fieldset class="filter__fieldset">
-                 <legend class="filter__legend">Тип жилья:</legend>
-                 <label class="filter__radio-button radio-button">
-                   <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="hotel" id="radio-hotel" checked>
-                   <span class="radio-button__label">Гостиница</span>
-                 </label>
-                 <label class="filter__radio-button radio-button">
-                   <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="motel" id="radio-motel">
-                   <span class="radio-button__label">Мотель</span>
-                 </label>
-                 <label class="filter__radio-button radio-button">
-                   <input class="radio-button__input visually-hidden" type="radio" name="housing-type" value="aprartments" id="radio-aprartments">
-                   <span class="radio-button__label">Апартаменты</span>
-                 </label>
-               </fieldset>
-             </div>
-             <div class="filter__container-right">
-               <fieldset class="filter__fieldset">
-                 <legend class="filter__legend">Стоимость, ₽:</legend>
-                 <div class="filter__value-container">
-                  <label class="form-control form-control--absolute-label">
-                    <input class="form-control__form-input form-input form-control__form-input--left" type="text" name="price-from" id="price-from">
-                    <span class="form-control__label form-control__label--absolute">от</span>
-                  </label>
-                  <label class="form-control form-control--absolute-label">
-                    <input class="form-control__form-input form-input form-control__form-input--right" type="text" name="price-to" id="price-to">
-                    <span class="form-control__label form-control__label--absolute">до</span>
-                  </label>
-                 </div>
-                 <div class="filter__slider-container">
-                   <input class="filter__slider-input" type="range" name="price-slider" id="price-slider">
-                   <label class="visually-hidden" for="price-slider">Ползунок для регулировки цены</label>
-                 </div>
-               </fieldset>
-               <div class="filter__button-container">
+                </div>
+                <div class="filter__slider-container">
+                  <input class="filter__slider-input" type="range" name="price-slider" id="price-slider">
+                  <label class="visually-hidden" for="price-slider">Ползунок для регулировки цены</label>
+              </fieldset>
+              <div class="filter__button-container">
                 <button class="filter__button button button--accent" type="submit">Применить</button>
                 <button class="filter__button button button--transparent" type="reset">Сбросить</button>
               </div>
-             </div>
             </form>
           </section>
           <section class="page__catalog catalog container">
