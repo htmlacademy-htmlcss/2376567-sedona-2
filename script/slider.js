@@ -14,8 +14,8 @@ let isMinDragging = false;
 let isMaxDragging = false;
 
 const updateInputs = () => {
-    const min = Math.round((13000 * (Math.ceil(minThumb.offsetLeft) / sliderTrack.offsetWidth)));
-    const max = Math.round((13000 * (Math.floor(maxThumb.offsetLeft) / sliderTrack.offsetWidth)));
+    const min = Math.round((12500 * (Math.ceil(minThumb.offsetLeft) / sliderTrack.offsetWidth)));
+    const max = Math.round((12500 * (Math.floor(maxThumb.offsetLeft) / sliderTrack.offsetWidth)));
     priceFromInput.value = min;
     priceToInput.value = max;
 };
@@ -24,8 +24,8 @@ const updateThumbsFromInputs = () => {
     const minValue = parseInt(priceFromInput.value);
     const maxValue = parseInt(priceToInput.value);
 
-    const minPercent = (minValue / 13000) * 100;
-    const maxPercent = (maxValue / 13000) * 100;
+    const minPercent = (minValue / 12500) * 100;
+    const maxPercent = (maxValue / 12500) * 100;
 
     if (minPercent >= 0 && minPercent <= maxPercent && maxPercent <= 100) {
         minThumb.style.left = minPercent + '%';
@@ -86,8 +86,8 @@ const initSliderFromInputs = () => {
     const minValue = parseInt(priceFromInput.value);
     const maxValue = parseInt(priceToInput.value);
 
-    const minPercent = (minValue / 13000) * 100;
-    const maxPercent = (maxValue / 13000) * 100;
+    const minPercent = (minValue / 12500) * 100;
+    const maxPercent = (maxValue / 12500) * 100;
 
     minThumb.style.left = minPercent + '%';
     maxThumb.style.left = maxPercent + '%';
@@ -97,7 +97,7 @@ const initSliderFromInputs = () => {
 
 const resetSlider = () => {
     priceFromInput.value = 0;
-    priceToInput.value = 13000;
+    priceToInput.value = 12500;
 
     minThumb.style.left = '0%';
     maxThumb.style.left = '100%';

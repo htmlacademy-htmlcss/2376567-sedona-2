@@ -4,13 +4,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style/style.css">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body class="page__body">
     <div class="page__wrapper">
-      <header class="page__header header container">
+      <header class="page__header header container" data-test="header">
         <nav class="header__navigation navigation">
           <a class="navigation__logo-link">
             <img class="navigation__logo logo" width="140" height="70" src="image/logo-sedona.svg"
@@ -18,7 +19,7 @@
           </a>
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="#">Главная</a>
+              <a class="navigation__link navigation__link--current">Главная</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">О седоне</a>
@@ -45,17 +46,17 @@
           </li>
         </ul>
       </header>
-      <main class="page__main main">
-        <section class="main__hero hero">
+      <main class="page__main main" data-test="main">
+        <section class="main__hero hero" data-test="hero">
           <h1 class="visually-hidden">Главная страница сайта по поиску гостиницы в туристическом городе Седона</h1>
           <img class="hero__img" src="image/hero-welcome.svg" width="458" height="352"
             alt="Надпись: Welcome, To the gorgeous, SEDONA Because Grand Canyon sucks!">
         </section>
-        <section class="main__advantages advantages">
+        <section class="main__advantages advantages" data-test="advantages">
           <header class="advantages__description description">
             <div class="description__container">
               <h2 class="visually-hidden">Преимущества</h2>
-              <p class="description__title title title--h2">Седона — небольшой городок в Аризоне, заслуживающий
+              <p class="description__title description__title--unique-bottom title title--h2">Седона — небольшой городок в Аризоне, заслуживающий
                 большего!</p>
               <p class="description__text text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
             </div>
@@ -97,25 +98,25 @@
             </li>
           </ul>
         </section>
-        <section class="main__services services">
+        <section class="main__services services" data-test="service">
           <div class="services__description description">
             <h2 class="visually-hidden">Отдых в комфорте и уюте</h2>
-            <p class="description__title title title--h2">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+            <p class="description__title title title--h2">Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</p>
             <p class="description__text text">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="services__list">
             <li class="services__card services--housing">
               <p class="services__title title title--h3">Жильё</p>
-              <p class="services__card-text card-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="services__card-text card-text">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
             </li>
             <li class="services__card services--eating">
               <p class="services__title title title--h3">Еда</p>
-              <p class="services__card-text card-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+              <p class="services__card-text card-text">Всегда заказывайте <br> топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
             <li class="services__card services--gifting">
               <p class="services__title title title--h3">Сувениры</p>
-              <p class="services__card-text card-text">Не только китайского, но и настоящего местного производства!</p>
+              <p class="services__card-text card-text">Не только китайского, <br> но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
@@ -124,23 +125,23 @@
             <div class="description__container">
               <h2 class="visually-hidden">Поиск гостиницы</h2>
               <p class="description__title title title--h2">Заинтересовались?</p>
-              <p class="description__text text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+              <p class="description__text text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
                 гостиниц в Седоне</p>
             </div>
             <a class="booking__button button button--basic button--big" href="#" id="search-link">Поиск Гостиницы В
               седоне</a>
           </div>
         </section>
-        <section class="main__subscribe subscribe subscribe--additional-view">
+        <section class="main__subscribe subscribe subscribe--additional-view" data-test="subscribe">
           <div class="subscribe__container">
             <div class="subscribe__description description">
               <h2 class="visually-hidden">Подписаться на рассылку</h2>
               <p class="description__title title title--h2">Подпишитесь на рассылку</p>
-              <p class="description__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+              <p class="description__text text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             </div>
             <form class="subscribe__form" id="subscribe-form" action="https://echo.htmlacademy.ru" method="post"
               autocomplete="off">
-              <label class="subscribe__label visually-hidden" for="subscribe-form-email">Введите Email</label>
+              <label class="visually-hidden" for="subscribe-form-email">Введите Email</label>
               <input class="subscribe__form-input form-input form-input--background" type="email"
                 id="subscribe-form-email" name="guest-email" placeholder="Ваш e-mail">
               <button class="subscribe__button button button--big button--accent" type="submit">Подписаться</button>
@@ -148,7 +149,7 @@
           </div>
         </section>
       </main>
-      <footer class="page__footer footer container">
+      <footer class="page__footer footer container" data-test="footer">
         <ul class="footer__socials socials">
           <li class="socials__item">
             <a class="socials__link" href="#">
@@ -183,77 +184,74 @@
           </svg>
         </a>
       </footer>
-      <section class="modal overlay visually-hidden">
+      <section class="modal overlay visually-hidden" data-test="modal">
         <div class="modal__container">
           <h2 class="modal__title title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
           <form class="modal__form">
-            <label class="modal__label" for="check-in">Дата Заезда:</label>
-            <input class="modal__form-input form-input modal__form-input--date" id="check-in" type="text"
-              value="1 сентября 2023" readonly>
-            <input class="modal__form-input--hidden" type="date" id="check-in-date">
-            <small class="modal__message modal__message--error">Мы не можем отправить вас в прошлое.</small>
-
-            <label class="modal__label" for="check-out">Дата Выезда:</label>
-            <input class="modal__form-input form-input modal__form-input--date" id="check-out" type="text"
-              value="1 сентября 2023" readonly>
-            <input class="modal__form-input--hidden" type="date" id="check-out-date">
-            <small class="modal__message">На эти даты есть свободные номера. Пока есть.</small>
-
+            <label class="modal__field">
+              <span class="modal__label">Дата Заезда:</span>
+              <input class="modal__form-input form-input modal__form-input--date" id="check-in" type="text"
+                value="27 апреля 2020" readonly>
+              <small class="modal__message modal__message--error">Мы не можем отправить вас в прошлое.</small>
+            </label>
+            <label class="modal__field">
+              <span class="modal__label">Дата Выезда:</span>
+              <input class="modal__form-input form-input modal__form-input--date" id="check-out" type="text"
+                value="1 сентября 2023" readonly>
+              <small class="modal__message">На эти даты есть свободные номера. Пока есть.</small>
+            </label>
             <div class="modal__guests-row">
-              <label class="modal__field" for="adults">
+              <div class="modal__field">
                 <span class="modal__label">Взрослые:</span>
                 <div class="modal__number-input">
-                  <button class="modal__button modal__button--decrease" type="button">
-                    <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" fill-opacity="1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs />
-                      <path d="M0 2L0 0L14 0L14 2L0 2Z" fill-rule="evenodd" />
+                  <label class="visually-hidden" for="adults-decrease">Меньше количество гостей</label>
+                  <button class="modal__button modal__button--decrease" id="adults-decrease" type="button">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20">
+                      <use xlink:href="image/sprite.svg#icon-minus"></use>
                     </svg>
                   </button>
+                  <label class="visually-hidden" for="adults">Количество гостей</label>
                   <input class="modal__form-input form-input modal__form-input--number" id="adults" type="number"
                     value="2" min="1" required>
-                  <button class="modal__button modal__button--increase" type="button">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" fill-opacity="1"
-                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs />
-                      <path d="M14 6L8 6L8 0L6 0L6 6L0 6L0 8L6 8L6 14L8 14L8 8L14 8L14 6Z" fill-rule="nonzero" />
+                  <label class="visually-hidden" for="adults-increase">Больше количество гостей</label>
+                  <button class="modal__button modal__button--increase" id="adults-increase" type="button">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20">
+                      <use xlink:href="image/sprite.svg#icon-plus"></use>
                     </svg>
                   </button>
                 </div>
-              </label>
-              <label class="modal__field" for="children">
-                <div class="modal__label">Дети:
-                  <div class="modal__tooltip">
+              </div>
+              <div class="modal__field">
+                <div class="modal__label modal__label--tooltip">Дети:
+                  <div class="modal__tooltip ">
                     <span class="modal__tooltip-icon">i</span>
                     <span class="modal__tooltiptext">Укажите количество детей, которые будут с вами, возраст которых от
                       6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                   </div>
                 </div>
                 <div class="modal__number-input">
-                  <button class="modal__button modal__button--decrease" type="button">
-                    <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" fill-opacity="1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs />
-                      <path d="M0 2L0 0L14 0L14 2L0 2Z" fill-rule="evenodd" />
+                  <label class="visually-hidden" for="children-decrease">Меньше количество гостей-детей</label>
+                  <button class="modal__button modal__button--decrease" id="children-decrease" type="button">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20">
+                      <use xlink:href="image/sprite.svg#icon-minus"></use>
                     </svg>
                   </button>
+                  <label class="visually-hidden" for="children">Количество гостей-детей</label>
                   <input class="modal__form-input form-input modal__form-input--number" id="children" type="number"
                     value="2" min="0">
-                  <button class="modal__button modal__button--increase" type="button">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" fill-opacity="1"
-                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs />
-                      <path d="M14 6L8 6L8 0L6 0L6 6L0 6L0 8L6 8L6 14L8 14L8 8L14 8L14 6Z" fill-rule="nonzero" />
+                  <label class="visually-hidden" for="children-increase">Больше количество гостей-детей</label>
+                  <button class="modal__button modal__button--increase" id="children-increase" type="button">
+                    <svg aria-hidden="true" focusable="false" width="20" height="20">
+                      <use xlink:href="image/sprite.svg#icon-plus"></use>
                     </svg>
                   </button>
                 </div>
-              </label>
+              </div>
             </div>
-
             <button class="modal__search-button button button--accent" type="submit">НАЙТИ</button>
             <button class="modal__close" id="modal-close" type="reset">
               <svg aria-hidden="true" focusable="false" width="18" height="15">
-                <use xlink:href="image/sprite.svg#modal-close-cross"></use>
+                <use xlink:href="image/sprite.svg#modal-cross"></use>
               </svg>
             </button>
           </form>

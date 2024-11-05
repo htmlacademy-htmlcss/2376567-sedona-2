@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style/style.css">
     <title>HTML Academy: Седона - Каталог</title>
   </head>
     <body class="page__body">
       <div class="page__wrapper">
-        <header class="page__header header container">
+        <header class="page__header header container" data-test="header">
           <nav class="header__navigation navigation">
             <a class="navigation__logo-link" href="index.html">
               <img class="navigation__logo logo" width="140" height="70" src="image/logo-sedona.svg" alt="Логотип сайта горордка Седона">
@@ -21,7 +22,7 @@
                 <a class="navigation__link" href="#">О седоне</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--current" href="#">Гостиницы</a>
+                <a class="navigation__link navigation__link--current">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -49,7 +50,7 @@
               <ol class="catalog-header__breadcrumbs breadcrumbs">
                   <li class="breadcrumbs__item">
                       <a class="breadcrumbs__link" href="index.html"><span class="visually-hidden">Главная</span>
-                      <svg aria-hidden="true" focusable="false" width="13" height="12">
+                      <svg aria-hidden="true" focusable="false" width="13" height="15">
                         <use xlink:href="image/sprite.svg#breadcrumbs-home"></use>
                       </svg>
                       </a>
@@ -59,7 +60,7 @@
                   </li>
               </ol>
             </header>
-            <form class="page__filter filter container" action="https://echo.htmlacademy.ru" method="post">
+            <form class="page__filter filter container" data-test="filter" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="filter__fieldset filter__fieldset--infrastructure">
                 <legend class="filter__legend">Инфраструктура:</legend>
                 <label class="filter__checkbox-button checkbox-button">
@@ -95,21 +96,21 @@
                 <div class="filter__value-container">
                     <label class="form-control form-control--absolute-label">
                         <input class="form-control__form-input form-input form-control__form-input--left"
-                               type="text"
+                               type="number"
                                name="price-from"
                                id="price-from"
                                min="0"
-                               max="13000"
+                               max="12500"
                                value="0">
                         <span class="form-control__label form-control__label--absolute">от</span>
                     </label>
                     <label class="form-control form-control--absolute-label">
                         <input class="form-control__form-input form-input form-control__form-input--right"
-                               type="text"
+                               type="number"
                                name="price-to"
                                id="price-to"
                                min="0"
-                               max="13000"
+                               max="12500"
                                value="9000">
                         <span class="form-control__label form-control__label--absolute">до</span>
                     </label>
@@ -117,8 +118,12 @@
                 <div class="filter__slider slider">
                     <div class="slider__track"></div>
                     <div class="slider__range slider__range--active"></div>
-                    <div class="slider__thumb slider__thumb--min" tabindex="0"></div>
-                    <div class="slider__thumb slider__thumb--max" tabindex="0"></div>
+                    <button class="slider__thumb slider__thumb--min" type="button">
+                      <span class="visually-hidden">Левый ползунок регулировки</span>
+                    </button>
+                    <button class="slider__thumb slider__thumb--max" type="button">
+                      <span class="visually-hidden">Правый ползунок регулировки</span>
+                    </button>
                 </div>
             </fieldset>
               <div class="filter__button-container">
@@ -127,7 +132,7 @@
               </div>
             </form>
           </section>
-          <section class="page__catalog catalog container">
+          <section class="page__catalog catalog container" data-test="catalog">
             <header class="catalog__sort sort">
               <h2 class="sort__title title title--h2">Найдено гостиниц: <span class="title__sort-count" id="sort-count">38</span></h2>
               <label class="sort__field">
@@ -140,17 +145,17 @@
               </label>
               <ul class="sort__views">
                 <li class="sort__view">
-                    <a class="sort__button sort__button--current sort__button--small-view" href="catalog.html?view=tile" type="button">
+                    <a class="sort__button sort__button--current sort__button--small-view" href="catalog.html?view=tile">
                       <span class="visually-hidden">Просмотр в маленьких значках</span>
                     </a>
                 </li>
                 <li class="sort__view">
-                    <a class="sort__button sort__button--large-view" href="catalog.html?view=card" type="button">
+                    <a class="sort__button sort__button--large-view" href="catalog.html?view=card">
                       <span class="visually-hidden">Просмотр в крупных значках</span>
                     </a>
                 </li>
                 <li class="sort__view">
-                    <a class="sort__button sort__button--list-view" href="catalog.html?view=list" type="button">
+                    <a class="sort__button sort__button--list-view" href="catalog.html?view=list">
                       <span class="visually-hidden">Просмотр в списке</span>
                     </a>
                 </li>
@@ -181,7 +186,7 @@
                   <a class="catalog-card__img-wrapper" href="#">
                     <img class="catalog-card__img" src="image/hotel-2.jpg" width="300" height="212" alt="Горный пейзаж, где на фоне темных облаков видна радуга.">
                   </a>
-                  <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">Villas at Poco Diablo</a></h3>
+                  <h3 class="catalog-card__title"><a class="catalog-card__link" href="#">Villas <span class="catalog-card__lower-case">at</span> Poco Diablo</a></h3>
                   <p class="catalog-card__type">Гостиница</p>
                   <p class="catalog-card__price">От <span class="catalog-card__value">5000</span> ₽</p>
                   <a class="catalog-card__button button button--basic" href="#">подробнее</a>
@@ -232,7 +237,7 @@
               </li>
             </ul>
             <footer class="catalog__pagination">
-              <a class="catalog__page-number catalog__page-number--current" href="#">1</a>
+              <a class="catalog__page-number catalog__page-number--current">1</a>
               <a class="catalog__page-number" href="#">2</a>
               <a class="catalog__page-number" href="#">3</a>
               <a class="catalog__page-number" href="#">4</a>
@@ -240,12 +245,12 @@
               <a class="catalog__page-number" href="#">10</a>
             </footer>
           </section>
-          <section class="main__subscribe subscribe">
+          <section class="main__subscribe subscribe" data-test="subscribe">
               <div class="subscribe__container">
                 <div class="subscribe__description description">
                   <h2 class="visually-hidden">Подписаться на рассылку</h2>
                   <p class="description__title title title--h2">Подпишитесь на рассылку</p>
-                  <p class="description__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+                  <p class="description__text text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
                 </div>
                 <form class="subscribe__form" id="subscribe-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
                   <label class="visually-hidden" for="subscribe-form-email">Введите Email</label>
@@ -255,7 +260,7 @@
               </div>
             </section>
         </main>
-        <footer class="page__footer footer container">
+        <footer class="page__footer footer container" data-test="footer">
           <ul class="footer__socials socials">
             <li class="socials__item">
               <a class="socials__link" href="#">
@@ -290,39 +295,6 @@
             </svg>
           </a>
         </footer>
-        <section class="modal overlay visually-hidden">
-          <div class="modal__container">
-            <h2 class="modal__title title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
-            <form class="modal__form">
-              <label class="modal__label" for="check-in">Дата Заезда:</label>
-              <input class="modal__form-input form-input modal__form-input--date" id="check-in" type="date" value="2020-04-27">
-              <small class="modal__message modal__message--error">Мы не можем отправить вас в прошлое.</small>
-              <label class="modal__label" for="check-out">Дата Выезда:</label>
-              <input class="modal__form-input form-input modal__form-input--date" id="check-out" type="date" value="2023-09-01">
-              <small class="modal__message modal__message--info">На эти даты есть свободные номера. Пока есть.</small>
-              <div class="modal__guests-row">
-                <label class="modal__field" for="adults"><span class="modal__label">Взрослые:</span>
-                  <input class="modal__form-input form-input modal__form-input--number" id="adults" type="number" value="2" min="1">
-                </label>
-                <label class="modal__field" for="children">
-                  <div class="modal__label">Дети:
-                    <div class="modal__tooltip">
-                      <span class="modal__tooltip-icon">?</span>
-                      <span class="modal__tooltiptext visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                    </div>
-                  </div>
-                  <input class="modal__form-input form-input modal__form-input--number" id="children" type="number" value="2" min="0">
-                </label>
-              </div>
-              <button class="modal__search-button button button--accent" type="submit">НАЙТИ</button>
-              <button class="modal__close" id="modal-close" type="reset">
-                <svg aria-hidden="true" focusable="false" width="18" height="15">
-                  <use xlink:href="image/sprite.svg#modal-close-cross"></use>
-                </svg>
-              </button>
-          </div>
-          </form>
-        </section>
       </div>
       <script src="/script/slider.js"></script>
     </body>
