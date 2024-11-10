@@ -1,0 +1,7 @@
+{
+  "homepage": "https://htmlacademy-htmlcss.github.io/2376567-sedona-2/3/",
+  "devDependencies": {
+    "stylelint": "^16.10.0",
+    "stylelint-config-htmlacademy": "^4.2.3"
+  }
+}
