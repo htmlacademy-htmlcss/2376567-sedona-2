@@ -24,7 +24,6 @@
   --text-main-color: #000000;
   --text-second-color: #333333;
   --text-background1-color: #ffffff;
-  /* --text-background2-color: rgba(255, 255, 255, 0.302); */
   --text-error-color: #ff5757;
 
   --button-main-color: #756157;
@@ -38,9 +37,7 @@
 
   --icon-basic-color: #000000;
   --icon-second-color: #83b3d3;
-  /* --icon-inscript-color:#7db54f; */
 
-  /* --form-input-color: #3f5e72; */
   --form-element1-color: #e5e5e5;
   --form-element2-color: #f2f2f2;
 
@@ -346,7 +343,7 @@ img {
 }
 
 .page__catalog {
-  padding: 48px 0 61px;
+  padding: 49px 0 61px;
 }
 
 /* header */
@@ -507,14 +504,14 @@ img {
 }
 
 .main__catalog-header {
-  padding: 35px 0 71px;
+  padding: 35px 0 69px;
 }
 
 /* hero */
 
 .hero {
   color: var(--text-background1-color);
-  background-color: #3f4449;
+  background-color: #3f3fa7;
   background-image: url("../image/hero-devider.svg"), url("../image/hero-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, 100% auto;
@@ -600,24 +597,6 @@ img {
 
 /* services */
 
-.services--housing::before {
-  content: url("../image/services-living.svg");
-  width: 75px;
-  height: 72px;
-}
-
-.services--eating::before {
-  content: url("../image/services-food.svg");
-  width: 74px;
-  height: 72px;
-}
-
-.services--gifting::before {
-  content: url("../image/services-souvenir.svg");
-  width: 64px;
-  height: 72px;
-}
-
 .services__list {
   margin: 0;
   padding: 0;
@@ -635,6 +614,24 @@ img {
   text-align: center;
   padding: 81px 85px;
   color: var(--text-second-color);
+}
+
+.services__card--housing::before {
+  content: url("../image/services-living.svg");
+  width: 75px;
+  height: 72px;
+}
+
+.services__card--eating::before {
+  content: url("../image/services-food.svg");
+  width: 74px;
+  height: 72px;
+}
+
+.services__card--gifting::before {
+  content: url("../image/services-souvenir.svg");
+  width: 64px;
+  height: 72px;
 }
 
 .services__card:nth-child(odd) {
@@ -716,7 +713,7 @@ img {
   background-image: url("../image/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-color: var(--background-basic-color);
+  background-color: #3f3fa7;
 }
 
 .subscribe__container {
@@ -893,7 +890,7 @@ img {
   background-image: url("../image/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--background-basic-color);
+  background-color: #3f3fa7;
 }
 
 .catalog-header__title {
@@ -1004,6 +1001,10 @@ img {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
+.slider__thumb:hover {
+  background: #e4e4e4;
+}
+
 .slider__thumb:focus {
   outline: 3px solid var(--button-second-color-interactive);
 }
@@ -1096,8 +1097,7 @@ img {
 .sort__select {
   font-family: var(--font-family);
   width: 292px;
-  padding: 12px 20px;
-  padding-right: 30px;
+  padding: 12px 30px 12px 20px;
   color: rgb(51, 51, 51);
   font-size: 18px;
   font-weight: 400;
@@ -1133,15 +1133,12 @@ img {
 /* form-control */
 
 .form-control {
+  position: relative;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   text-align: left;
   cursor: pointer;
-}
-
-.form-control--absolute-label {
-  position: relative;
 }
 
 .form-control__form-input {
@@ -1150,8 +1147,14 @@ img {
   padding: 0 34px 0 18px;
 
   font-weight: 700;
+  -moz-appearance: textfield;
 }
 
+.form-control__form-input:hover {
+  opacity: 80%;
+}
+
+.form-control__form-input::-ms-clear,
 .form-control__form-input::-webkit-inner-spin-button,
 .form-control__form-input::-webkit-outer-spin-button {
   display: none;
@@ -1194,7 +1197,9 @@ img {
 
 .catalog-card {
   max-width: 340px;
+  height: 100%;
   display: grid;
+  align-content: start;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
   padding: 20px;
@@ -1204,6 +1209,10 @@ img {
 
 .catalog-card__img-wrapper {
   grid-column: 1/-1;
+}
+
+.catalog-card__img-wrapper:hover {
+  opacity: 80%;
 }
 
 .catalog-card__img-wrapper:focus {
@@ -1217,6 +1226,10 @@ img {
 .catalog-card__link {
   text-decoration: none;
   color: inherit;
+}
+
+.catalog-card__link:hover {
+  opacity: 80%;
 }
 
 .catalog-card__lower-case {
@@ -1394,7 +1407,6 @@ img {
 .modal__form {
   display: flex;
   flex-direction: column;
-  row-gap: 48px;
 }
 
 .modal__label {
@@ -1411,6 +1423,7 @@ img {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  align-content: start;
 }
 
 .modal__form-input {
@@ -1422,6 +1435,10 @@ img {
   line-height: 24px;
 }
 
+.modal__form-input:hover {
+  opacity: 80%;
+}
+
 .modal__form-input--hidden {
   visibility: hidden;
   position: relative;
@@ -1429,15 +1446,16 @@ img {
   right: -300px;
 }
 
-.modal__message {
-  position: absolute;
-  bottom: -25px;
+.modal__message-container {
+  min-height: 48px;
   grid-column: 2 / -1;
-  padding: 0 20px;
+  padding: 2px 20px;
+}
+
+.modal__message {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  align-self: self-start;
 }
 
 .modal__message--error {
@@ -1446,6 +1464,7 @@ img {
 
 .modal__search-button {
   height: 60px;
+  margin: 46px 0 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1469,14 +1488,14 @@ img {
   font-weight: 400;
 }
 
-.modal__tooltiptext {
+.modal__tooltip-text {
   display: none;
   position: absolute;
-  top: 42px;
-  right: -114px;
+  top: 41px;
+  right: -113px;
   background-color: var(--text-second-color);
   min-width: 256px;
-  padding: 19px 21px 23px 23px;
+  padding: 20px 21px 23px 23px;
   border-radius: 10px;
   z-index: 2;
   color: var(--background-back-color);
@@ -1485,7 +1504,7 @@ img {
   line-height: 20px;
 }
 
-.modal__tooltiptext::after {
+.modal__tooltip-text::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -1502,8 +1521,8 @@ img {
   cursor: pointer;
 }
 
-.modal__tooltip-icon:hover + .modal__tooltiptext,
-.modal__tooltip-icon:focus-visible + .modal__tooltiptext {
+.modal__tooltip-icon:hover + .modal__tooltip-text,
+.modal__tooltip-icon:focus-visible + .modal__tooltip-text {
   display: block;
 }
 
@@ -1512,7 +1531,6 @@ img {
 }
 
 .modal__form-input--date {
-  cursor: pointer;
   background-image: url("../image/icon-calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
