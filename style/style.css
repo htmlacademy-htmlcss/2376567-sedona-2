@@ -490,7 +490,7 @@ img {
 }
 
 .user-menu__button {
-  min-width: 160px;
+  width: 160px;
 }
 
 /* main */
@@ -875,6 +875,10 @@ img {
 
 .breadcrumbs__item:not(:last-child) .breadcrumbs__link:hover {
   opacity: 60%;
+}
+
+.breadcrumbs__item:not(:last-child) .breadcrumbs__link:active {
+  opacity: 30%;
 }
 
 .breadcrumbs__item:not(:last-child)::after {
@@ -1537,6 +1541,7 @@ img {
   padding-right: 40px;
 }
 
+.modal__form-input--number::-ms-clear,
 .modal__form-input--number::-webkit-inner-spin-button,
 .modal__form-input--number::-webkit-outer-spin-button {
   display: none;
@@ -1547,6 +1552,8 @@ img {
   padding: 0;
   margin: 0;
   text-align: center;
+
+  -moz-appearance: textfield;
 }
 
 .modal__tooltip {
